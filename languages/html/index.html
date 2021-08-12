@@ -73,6 +73,7 @@
             var log = document.getElementById("log");
             function updateOnlineStatus() {
                 var condition = navigator.onLine ? "online" : "offline";
+
                 status.className = condition;
                 status.innerHTML = condition.toUpperCase();
                 console.log('the event is', condition)
