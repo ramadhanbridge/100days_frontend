@@ -114,6 +114,43 @@
         grid-area: six;
 
     }
+
+    .creative {
+        height: 100vh;
+        padding: 0;
+        width: 100%;
+        margin: 0;
+        background: url(https://picsum.photos/id/1028/200/300);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-color: #0000008f;
+        background-blend-mode: color;
+        display: grid;
+        place-content: center;
+    }
+
+    .creative>p {
+        background-image: linear-gradient(to right, #c21500, #ffc500);
+        font-size: 83px;
+        text-align: center;
+        color: transparent;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-size: 400%;
+        background-position: left;
+        animation: move 10s infinite alternate;
+    }
+
+    @keyframes move {
+        0% {
+            background-position: left;
+        }
+
+        100% {
+            background-position: right;
+        }
+    }
 </style>
 
 <body>
@@ -274,6 +311,10 @@
         <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda excepturi repellendus eum perferendis
             doloremque labore, dicta, rem, quos illum hic similique sint repellat ratione. Recusandae minus asperiores
             reprehenderit quis sequi.</div>
+    </div>
+    <h3 class="tBMargin">creative</h3>
+    <div class="creative">
+        <p>Ram Bridge</p>
     </div>
 </body>
 
