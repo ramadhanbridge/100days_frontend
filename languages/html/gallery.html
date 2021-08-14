@@ -151,6 +151,30 @@
             background-position: right;
         }
     }
+
+    .pborder::before {
+        content: "";
+        border: 4px solid red;
+        border-top: 0;
+        border-right: 0;
+        padding: 18px;
+        position: relative;
+        height: 24px;
+        font-size: 2px;
+        top: 4px;
+    }
+
+    .pborder::after {
+        content: "";
+        border: 4px solid red;
+        border-bottom: 0;
+        border-left: 0;
+        padding: 18px;
+        position: relative;
+        height: 24px;
+        font-size: 2px;
+        top: -52px;
+    }
 </style>
 
 <body>
@@ -314,7 +338,7 @@
     </div>
     <h3 class="tBMargin">creative</h3>
     <div class="creative">
-        <p>Ram Bridge</p>
+        <p class="pborder">Ram Bridge</p>
     </div>
 </body>
 
