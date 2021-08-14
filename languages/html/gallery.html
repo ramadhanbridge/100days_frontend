@@ -8,6 +8,14 @@
     <title>Document</title>
 </head>
 <style>
+    :root {
+        --tbmargin: 10px auto;
+    }
+
+    .tBMargin {
+        margin: var(--tbmargin);
+    }
+
     .container {
         width: 50%;
         margin: 10px auto;
@@ -23,8 +31,31 @@
         ;
     }
 
+    .overlap {
+        display: grid;
+    }
+
     .container>div {
         border-radius: 15px;
+    }
+
+    .overlap>img {
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        width: 100%;
+        height: fit-content;
+        object-fit: cover;
+    }
+
+    .overlap>p {
+        grid-column: 1;
+        grid-row: 1;
+        background: #3d333366;
+        color: orange;
+        font-weight: 600;
+        line-height: 34px;
+        align-self: end;
+        margin: 0;
     }
 
     .container>div>img {
@@ -195,6 +226,13 @@
         <div class="six">
             <img src="https://picsum.photos/id/1028/200/300" alt="">
         </div>
+    </div>
+
+    <h3 class="tBMargin">overlap with grid</h3>
+    <div class="overlap">
+        <img src="https://picsum.photos/id/1028/200/300" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis consequuntur doloribus corporis vel
+            placeat rerum facilis incidunt similique fugit explicabo.</p>
     </div>
 </body>
 
