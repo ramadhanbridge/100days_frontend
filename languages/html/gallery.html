@@ -7,9 +7,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .container {
+        width: 50%;
+        margin: 0 auto;
+        /* min-height: 500px; */
+        display: grid;
+        grid-auto-rows: minmax(153px, 154px);
+        gap: 4px;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            "one two three"
+            "one four five"
+            "six six five"
+        ;
+    }
+
+    .container>div {
+        border-radius: 15px;
+    }
+
+    .container>div>img {
+        border-radius: 15px;
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+
+    .container>div>img:hover {
+        opacity: 0.9;
+    }
+
+    .one {
+        background-color: hotpink;
+        grid-area: one;
+    }
+
+    .two {
+        background-color: hsl(0, 96%, 44%);
+        grid-area: two;
+
+    }
+
+    .three {
+        background-color: hsl(69, 53%, 53%);
+        grid-area: three;
+
+    }
+
+    .four {
+        background-color: hsl(133, 37%, 46%);
+        grid-area: four;
+
+    }
+
+    .five {
+        background-color: rgba(61, 61, 61, 0.829);
+        grid-area: five;
+
+    }
+
+    .six {
+        background-color: rgb(50, 46, 110);
+        grid-area: six;
+
+    }
+</style>
 
 <body>
-
+    <div class="container">
+        <div class="one">
+            <img src="https://picsum.photos/id/1023/200/300" alt="">
+        </div>
+        <div class="two">
+            <img src="https://picsum.photos/id/1024/200/300" alt="">
+        </div>
+        <div class="three">
+            <img src="https://picsum.photos/id/1025/200/300" alt="">
+        </div>
+        <div class="four">
+            <img src="https://picsum.photos/id/1026/200/300" alt="">
+        </div>
+        <div class="five">
+            <img src="https://picsum.photos/id/1027/200/300" alt="">
+        </div>
+        <div class="six">
+            <img src="https://picsum.photos/id/1028/200/300" alt="">
+        </div>
+    </div>
 </body>
 
 </html>
