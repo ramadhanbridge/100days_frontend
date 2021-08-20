@@ -1,0 +1,23 @@
+body{
+ display: grid;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+}
+
+.container{
+    perspective: 600px;
+}
+.side{
+    height: 200px;
+    width: 200px;
+}
+.side1{
+   
+    background: chocolate;
+    transform: translate3d(10px, 10px, -108px);
+}
+.side2{
+    background: hsl(46, 77%, 49%);
+    transform: translate3d(10px, 10px, -108px);
+}
