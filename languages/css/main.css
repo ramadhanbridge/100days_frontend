@@ -12,12 +12,9 @@ body{
     height: 200px;
     width: 200px;
 }
-.side1{
-   
-    background: chocolate;
-    transform: translate3d(10px, 10px, -108px);
-}
-.side2{
-    background: hsl(46, 77%, 49%);
-    transform: translate3d(10px, 10px, -108px);
-}
+.side1  { background-color: chocolate ;transform: rotateY(  0deg) translateZ(100px); }
+.side2  { background-color: rgb(30, 210, 75) ;transform: rotateY( 90deg) translateZ(100px); }
+.side3  {background-color: rgb(57, 30, 210) ; transform: rotateY(180deg) translateZ(100px); }
+.side4   {background-color: rgb(184, 23, 77) ; transform: rotateY(-90deg) translateZ(100px); }
+.side5     { background-color: rgb(210, 253, 16) ;transform: rotateX( 90deg) translateZ(100px); }
+.side6  {background-color: rgb(30, 183, 210) ; transform: rotateX(-90deg) translateZ(100px); }
