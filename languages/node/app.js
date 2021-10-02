@@ -84,5 +84,20 @@ fs.unlink('dir/example2.txt', (err) => {
     }
 })
 
+fs.mkdir("../tutsss", (err) => {
+    if (err) {
+        console.log(err)
+    } else {
+        fs.writeFile("../tutsss/index.html", "<h1>Hello</h1>", (err) => {
+            if (err) {
+                console.log(err)
+            } else {
+                console.log("successful tuts file crearted")
+            }
+        })
+        console.log("successful dir created")
+    }
+})
+
 
 
