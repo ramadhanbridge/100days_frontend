@@ -116,16 +116,20 @@ const fs = require('fs');
 //     }
 // })
 
-fs.readdir('./dir', (err, files) => {
-    if (err) {
-        console.log('error')
-    } else {
-        files.forEach(file => {
-            fs.unlink('./dir/' + file, (err) => {
-                if (err) throw err;
-                console.log("files removed")
-            })
-        })
-    }
-})
+// fs.readdir('./dir', (err, files) => {
+//     if (err) {
+//         console.log('error')
+//     } else {
+//         files.forEach(file => {
+//             fs.unlink('./dir/' + file, (err) => {
+//                 if (err) throw err;
+//                 console.log("files removed")
+//             })
+//         })
+//     }
+// })
 
+fs.readFile('./dir/large.txt', 'utf-8', (err, data) => {
+    if (err) throw err;
+    console.log(data)
+})
