@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(182, 161, 92);
+}
+#video{
+    height: 500px;
+    width: 100%;
+    background-color: cornflowerblue;
+}
+
+h1{
+    text-align: center; 
+ }  
+ p{
+     font-size: 24px;
+    color: blueviolet;
+ }
+
+ p:first{
+     font-size: 40px;
+ }
+ .textred{
+    color: brown;
+ }
+ #footerHeader{
+    
+    font-size: 30px; 
+    background-color: black;    
+ }
