@@ -82,5 +82,18 @@
 
 // set 
 
-let num = [...new Set([1, 2, 2, 3, 4, 5])]
-console.log(num)
+// let num = [...new Set([1, 2, 2, 3, 4, 5])]
+// console.log(num)
+
+
+// symbol 
+
+
+//bind
+function oparation(a, b) {
+    return a * b
+}
+
+let array = [1, 2, 3, 4, 5]
+const multi = array.map(oparation.bind(null, 2))
+console.log(multi)
