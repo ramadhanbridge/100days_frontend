@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d transform</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+            place-items: center;
+
+        }
+
+        .plane {
+            -webkit-perspective: 600px;
+            -ms-perspective: 600px;
+            perspective: 600px;
+            height: 300px;
+            width: 340px;
+        }
+
+        .card:hover .plane {
+            transition: all 1s ease;
+            perspective: 100px;
+
+        }
+
+        .plane:hover .card {
+            transition: all 4s ease;
+            transform: rotate3d(0, 1, 0, 180deg);
+        }
+
+        .card {
+            height: 100%;
+            width: 100%;
+            transition: all 4s ease;
+            ;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .card>div {
+            height: 300px;
+            width: 340px;
+            position: absolute;
+            border-radius: 15px;
+
+        }
+
+        .face1 {
+            color: white;
+            background: #f4a261;
+            transform: translateZ(-1px) rotateY(180deg);
+
+        }
+
+        .face2 {
+            color: white;
+            background: #e76f51
+        }
+    </style>
+</head>
+
+<body>
+    <div class="plane">
+        <div class="card">
+            <div class="face1">hello</div>
+            <div class="face2">hello</div>
+        </div>
+    </div>
+</body>
+
+</html>
