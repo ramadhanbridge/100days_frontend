@@ -26,15 +26,13 @@
             width: 340px;
         }
 
-        .card:hover .plane {
-            transition: all 1s ease;
-            perspective: 100px;
 
-        }
 
         .plane:hover .card {
             transition: all 4s ease;
             transform: rotate3d(0, 1, 0, 180deg);
+            transform-style: preserve-3d;
+
         }
 
         .card {
@@ -48,22 +46,45 @@
 
         .card>div {
             height: 300px;
-            width: 340px;
+            width: 300px;
             position: absolute;
-            border-radius: 15px;
 
         }
 
         .face1 {
             color: white;
             background: #f4a261;
-            transform: translateZ(-1px) rotateY(180deg);
-
+            transform: translateZ(-300px) rotateY(180deg);
         }
 
         .face2 {
             color: white;
             background: #e76f51
+        }
+
+        .face3 {
+            color: white;
+            background: #ff3b0a;
+            transform: translateZ(-150px) translateY(-150px) translateX(-0px) rotateX(90deg)
+        }
+
+        .face4 {
+            color: white;
+            background: #fffb06;
+            transform: translateZ(-150px) translateY(150px) translateX(-0px) rotateX(90deg)
+        }
+
+        .face5 {
+            color: white;
+            background: #66df15;
+            transform: translateZ(-150px) translateY(0px) translateX(150px) rotateY(90deg);
+        }
+
+        .face6 {
+            color: white;
+            background: #0893f0;
+            transform: translateZ(-150px) translateY(0px) translateX(-150px) rotateY(90deg);
+
         }
     </style>
 </head>
@@ -71,8 +92,12 @@
 <body>
     <div class="plane">
         <div class="card">
-            <div class="face1">hello</div>
-            <div class="face2">hello</div>
+            <div class="face1">hello1</div>
+            <div class="face2">hello2</div>
+            <div class="face3">hello3</div>
+            <div class="face4">hello4</div>
+            <div class="face5">hello5</div>
+            <div class="face6">hello6</div>
         </div>
     </div>
 </body>
