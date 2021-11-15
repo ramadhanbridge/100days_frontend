@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background: aqua;
+  padding: 40px;
+  text-align: center;
+  font-size: 40px;
+}
+
+@media (max-width: 500px) {
+  header {
+    font-size: 10px;
+  }
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 400px;
+  background: aqua;
+}
+
+.container .about h1, .container .contact h1 {
+  font-weight: 100;
+}
+
+.container .about h1:hover, .container .contact h1:hover {
+  color: red;
+  font-size: 40px;
+}
+
+.container .contact h1:hover {
+  color: yellow;
+}

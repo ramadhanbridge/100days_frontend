@@ -1,0 +1,4 @@
+@function size($sizename)
+{
+    @return  map-get($map: $font-size, $key: $sizename);
+}

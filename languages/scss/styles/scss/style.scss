@@ -1,0 +1,41 @@
+@import './_variables';
+@import './_function';
+@import './_mixins';
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background: $primary;
+    padding: 40px;
+    text-align: center;
+    font-size: size(medium);
+    @media  (max-width:$mobile) {
+        @include Media($mobile)  
+    }
+}
+.container{
+    @include flexstyle(row);
+    background: $primary;
+    .about{
+        h1{
+            font-weight: 100;
+            &:hover{
+                color:red;
+                font-size: map-get($map: $font-size, $key:medium );
+            }
+
+        }
+       
+    }
+    .contact{
+        @extend .about;
+        h1:hover{
+            color:yellow
+        }
+    }
+  
+}
