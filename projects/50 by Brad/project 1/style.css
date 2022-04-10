@@ -1,0 +1,51 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-content: center;
+}
+
+.container>div {
+    position: relative;
+}
+
+.container>div>img {
+    width: 100px;
+    height: 60vh;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: 0.5s ease-in-out;
+}
+
+.container {
+    display: flex;
+    gap: 4px;
+}
+
+.active {
+    width: 200px !important;
+}
+
+span {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: whitesmoke;
+    opacity: 0;
+}
+
+
+img.active ~ span {
+    opacity: 1 !important;
+
+}
