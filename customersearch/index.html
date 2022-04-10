@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+</head>
+<body>
+   <!-- <input type="text" class="search">
+   <button type="submit" class="submit">Search</button>
+   <div class="images">
+
+   </div> -->
+
+   <div class="gcse-search"></div>
+
+   <script>
+       let searchval = document.querySelector('.search').value;
+       let submit = document.querySelector('.submit')
+       let searchscript = document.createElement('script');
+       searchscript.src = `https:www.googleapis.com/customesearch/v1?key=AIzaSyAPHgK1RywuoAuMRN90k1wAfmDF-wwcLEg&cx=934cee219b79b5a1e&q=${searchval}`
+       submit.addEventListener('click',()=>{
+       })
+
+   </script>
+   <script async src="https://cse.google.com/cse.js?cx=934cee219b79b5a1e"></script>
+   
+</body>
+</html>
