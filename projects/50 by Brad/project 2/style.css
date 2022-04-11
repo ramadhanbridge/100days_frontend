@@ -29,15 +29,7 @@ body {
     background-color: rgb(172, 174, 177);
 }
 
-.progress {
-    position: absolute;
-    top: 50%;
-    height: 4px;
-    width: 100%;
-    transform: translateY(-50%);
-    background-color: rgb(172, 174, 177);
-    z-index: -1;
-}
+
 
 
 
@@ -62,16 +54,25 @@ body {
     color: white;
 }
 
-.progress.activeprogress::after {
-    content: "";
-    width: 0%;
+.steps>.separate {
+    width: 100%;
     position: absolute;
     top: 50%;
     height: 4px;
     transform: translateY(-50%);
-    z-index: -1;
+    z-index: -2;
+    background-color: rgb(172, 174, 177);
+}
+
+.progress {
+    position: absolute;
+    top: 50%;
+    height: 4px;
+    width: 70%;
+    transform: translateY(-50%);
     background-color: aqua;
     transition: width 0.5s ease-in-out;
+    z-index: -1;
 }
 
 [disabled] {
@@ -80,10 +81,11 @@ body {
     cursor: not-allowed !important;
 }
 
-.movebtn{
-    cursor: pointer 
+.movebtn {
+    cursor: pointer
 }
-.movebtn:active{
+
+.movebtn:active {
     transform: scale(0.96);
     outline: none;
 }

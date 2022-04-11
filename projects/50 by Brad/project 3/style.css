@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: cadetblue;
+    width: 100%;
+    overflow: hidden;
+}
+
+.menu {
+    width: 200px;
+    height: 200px;
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    background-color: blanchedalmond;
+    display: absolute;
+    border-radius: 50%;
+    z-index: 100;
+    transition: 0.5s ease-in-out;
+}
+
+.menu button {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    color: rgb(49, 41, 41);
+    font-weight: bold;
+    font-size: 16px;
+    top: 125px;
+    left: 125px;
+    transform: translate(-50%);
+}
+
+.menu .hide {
+    transform: translateX(-100px) rotate(90deg) translateY(-15px);
+}
+
+.menurotate {
+    transform: rotate(270deg);
+    transition: 0.5s ease-in-out;
+}
+
+.menurotate ~.contents {
+    transform: rotate(-36deg);
+    transition: 0.5s ease-in-out;
+}
+
+.contents {
+    width: 100%;
+    height: 2000px;
+    transform-origin:top left;
+    background-color: rgb(41, 179, 179);
+    transition: 0.5s ease-in;
+}

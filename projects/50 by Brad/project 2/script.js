@@ -1,20 +1,9 @@
 let circles = document.querySelectorAll('.circle')
 let prev = document.querySelector('.prebtn')
 let next = document.querySelector('.nxtbtn')
-let activeprogress = document.querySelector('.activeprogress')
+let progressbar = document.querySelector('.progress')
+let interval = 0;
 let activesize = 1;
-
-prev.addEventListener('click', () => {
-    activesize--
-    if (activesize > 1) {
-        next.removeAttribute("disabled", "")
-    } else {
-        prev.setAttribute("disabled", "")
-    }
-    update()
-    let size = circles.length - activesize
-    progress(size)
-})
 
 next.addEventListener('click', () => {
     activesize++
@@ -24,14 +13,34 @@ next.addEventListener('click', () => {
         next.setAttribute("disabled", "")
     }
     update()
-    let size = circles.length - activesize
-    progress(size)
+    interval = interval + 100 / (circles.length - 1);
+    progress(interval)
+
 })
+
+prev.addEventListener('click', () => {
+    activesize--
+    if (activesize > 1) {
+        next.removeAttribute("disabled", "")
+    } else {
+        prev.setAttribute("disabled", "")
+    }
+    update()
+    interval = interval - 100 / (circles.length - 1);
+    if (activesize == 1) {
+        interval = 0
+        progress(interval)
+    } else {
+        progress(interval)
+    }
+
+})
+
+
 
 function update() {
     circles.forEach((circle, index) => {
         if (index < activesize) {
-            console.log("hello")
             circle.classList.add('active')
         } else {
             circle.classList.remove('active')
@@ -39,6 +48,7 @@ function update() {
     })
 }
 
-function progress(size) {
-    activeprogress.style.width = `${100 / size}` + '100'
+function progress(interval) {
+    progressbar.style.width = `${interval}` + '%'
 }
+progress(interval)
