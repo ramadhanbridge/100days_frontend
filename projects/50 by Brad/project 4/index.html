@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            width: 100vw;
+            background-color: blanchedalmond;
+            display: grid;
+            place-content: center;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .search,
+        .btn {
+            border: none;
+            outline: none;
+            height: 50px;
+            padding: 8px;
+            position: absolute;
+        }
+
+        .search {
+            width: 80px;
+            right: -80px;
+            transition: width 0.2s ease-in;
+        }
+
+        .btn {
+            width: 80px;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        .container.active .search {
+            width: 200px !important;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" class="search" placeholder="type ...">
+        <button class="btn">search</button>
+    </div>
+    <script>
+        let btn = document.querySelector('.btn')
+        let container = document.querySelector('.container')
+        btn.addEventListener('click', () => {
+            container.classList.contains('active') ? container.classList.remove('active') : container.classList.add('active')
+        })
+    </script>
+</body>
+
+</html>
