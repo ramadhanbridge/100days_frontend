@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: rgb(89, 12, 161);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+}
+
+.btn{
+  width: 120px;
+  height: 60px;
+  padding: 10px;
+  background: blueviolet;
+  border: none;
+  border-radius: 8px;
+  margin: 0 3px;
+}
+.btn:active{
+    outline: none;
+    transform: scale(0.96);
+}
