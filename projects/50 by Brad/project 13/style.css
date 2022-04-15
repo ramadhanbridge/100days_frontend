@@ -1,0 +1,40 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: rgb(44, 12, 75);
+    display: grid;
+    place-content: center;
+    color: white;
+}
+
+textarea {
+    width: 500px;
+    min-height: 300px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+.tagsHolder {
+    width: 500px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.tag {
+    display: grid;
+    background-color: rgb(180, 180, 6);
+    border-radius: 20px;
+    padding: 15px 20px;
+    place-content: center;
+    
+}
+.tag.light{
+    background-color: rgba(65, 58, 58, 0.753);
+}
+ 
