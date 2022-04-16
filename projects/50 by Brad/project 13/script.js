@@ -2,8 +2,8 @@ let typing = document.querySelector('.tagsInsertArea')
 let tagsHolder = document.querySelector('.tagsHolder')
 
 typing.addEventListener('keyup', (e) => {
-    
-    if(e.key === 'Enter'){
+
+    if (e.key === 'Enter') {
         console.log('234')
         selectrandom()
     }
@@ -28,17 +28,17 @@ function createtags(input) {
 }
 
 
-function selectrandom(){
+function selectrandom() {
     let time = 30
-    let tagloop = setInterval(higlighttag,1000)
+    let tagloop = setInterval(higlighttag, 1000)
 }
 
-function higlighttag(){
+function higlighttag() {
     let tags = document.querySelectorAll('.tag')
     tags.forEach(tag => {
-       removelight()
+        removelight()
     });
-    let tag = tags[Math.floor(Math.random*(tags.length))]
+    let tag = tags[Math.floor(Math.random * (tags.length))]
     console.log(tag)
 
 }
@@ -46,6 +46,6 @@ function higlighttag(){
 function removelight() {
     document.querySelectorAll('.tag').forEach(tag => {
         tag.classList.remove('light')
-     });
-    
+    });
+
 }
