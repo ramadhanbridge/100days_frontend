@@ -10,7 +10,6 @@ getMovies(APi_Fetch)
 async function getMovies(url) {
     const res = await fetch(url)
     const data = await res.json()
-    console.log(data)
     showmovies(data.results)
 }
 function showmovies(movies) {
@@ -51,7 +50,6 @@ form.addEventListener('submit', e => {
     e.preventDefault()
     const searchTerm = search.value
     if (searchTerm !== '') {
-        console.log('by')
         getMovies(Search_URL + searchTerm)
         search.value = ''
     } else {
