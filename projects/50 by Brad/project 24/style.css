@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+
+}
+.card{
+    height: 400px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 2px 3px 20px 2px rgb(194, 193, 193),-2px -3px 20px 2px rgb(156, 156, 156);;
+}

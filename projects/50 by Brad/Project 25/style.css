@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.body{
+  min-height: 100vh;
+  width: 100%;
+}
+
+nav{
+    padding: 50px;
+    background: black;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    transition: 0.5s ease;
+}
+nav.active{
+    padding: 30px;
+    background: rgb(253, 9, 9);
+}
+
+.container{
+    height: 1200px;
+    background-color: rgb(57, 230, 230);
+}
