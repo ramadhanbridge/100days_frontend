@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: crimson;
+    width: 100%;
+    min-height: 100vh; 
+    display: grid;
+    place-content: center;
+    
+}
+
+canvas{
+    border: 2px solid steelblue;
+    background-color: white;
+}
+
+.toolbox{
+    background-color: steelblue;
+    border: 1px solid slateblue;
+    display: flex;
+
+}
+
+.toolbox > *{
+    background-color: white;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    height: 50px;
+    width: 50px;
+    margin: 0.25rem;
+    padding: 00.25rem;
+    cursor: pointer;
+}
+
+.toolbox> *:last-child{
+    margin-left: auto;
+}
